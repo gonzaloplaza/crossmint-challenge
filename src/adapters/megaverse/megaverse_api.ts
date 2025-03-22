@@ -36,10 +36,9 @@ const insertSoloon =
             color: soloon.color,
         });
 
-export const megaverseApi = (client: MegaverseApiClient) =>
-    ({
-        getMapData: getMapData(client),
-        insertPolyanet: insertPolyanet(client),
-        insertCometh: insertCometh(client),
-        insertSoloon: insertSoloon(client),
-    }) satisfies MegaverseApi;
+export const megaverseApi = (client: MegaverseApiClient): MegaverseApi => ({
+    getMapData: getMapData(client),
+    insertPolyanet: insertPolyanet(client),
+    insertCometh: insertCometh(client),
+    insertSoloon: insertSoloon(client),
+});

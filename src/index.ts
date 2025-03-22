@@ -14,7 +14,5 @@ getMapData()
     .then(async (goalMapData) =>
         createCrossmintLogo(insertPolyanet, insertCometh, insertSoloon, logger)(goalMapData),
     )
-    .then((totalInserted) =>
-        logger.info(`Crossmint Logo created successfully with ${totalInserted} figures 🚀!`),
-    )
+    .then(() => logger.info(`Crossmint Logo created successfully with figures 🚀!`))
     .catch((error) => logger.error(error));

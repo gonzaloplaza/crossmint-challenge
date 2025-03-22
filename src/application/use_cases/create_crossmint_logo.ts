@@ -10,9 +10,8 @@ export const createCrossmintLogo =
         insertSoloon: MegaverseApi['insertSoloon'],
         logger: Logger,
     ) =>
-    async (goalMap: FigureType[][]): Promise<number> => {
+    async (goalMap: FigureType[][]): Promise<void> => {
         const figures = toFigures(goalMap);
-
         const inserters = {
             Cometh: insertCometh,
             Polyanet: insertPolyanet,
@@ -26,6 +25,4 @@ export const createCrossmintLogo =
                 logger.info(`Inserted ${figure.constructor.name}:`, figure);
             }
         }
-
-        return figures.length;
     };
